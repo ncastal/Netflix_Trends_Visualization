@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Fun Facts</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <style>
+      html, body, #container ,#container2{
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      }
+
+      div .col-lg-12 {
+        width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      }
+      .container-fluid{
+        width: 100%;
+        /* height: fit-content; */
+        margin: 0;
+        padding: 0;
+        /* margin-bottom: 0px; */
+      }
+      .info{
+        background-color: black;
+        color: red;
+        height: 250px;
+        padding-top: 50px;
+        text-align: center;
+        text-shadow: -1px -1px 0 white;
+      }
+     .svg-container{
+        width: fit-content;
+        padding:0;
+        margin: 0;
+      }
+      .label{
+        text-align: center;
+        color: white;
+        text-shadow: none;
+      }
+      #pie_jumbo{
+        margin: 0;
+        padding:0;
+      }
+      /* #label-section{
+        background: black!important;
+      } */
+    </style> 
+
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <b><a class="navbar-brand" id="logo" href="./homepage.html">Netflix</a></b>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fun_facts.html">Fun Facts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./popular_shows.html">Most Popular Shows</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./data.html">Data</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="container-fluid no-padding">
+      <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+              <img src="../Images/border.jpg" id="fun_facts_img">
+            
+              <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <img src="../Images/funfact2.jpg" id="funfact2">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                      <div class ="col-lg-6 col-md-6 col-sm-6">
+                          <img src="../Images/funfact1.jpg" class="img-responsive" id="funfact1">
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                        <img src="../Images/funfact3.jpg" class="img-responsive" id="funfact3">
+                      </div>
+              </div>
+          </div> 
+          
+      </div>
+      
+  </div> 
+
+  <section class="info">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <h2>MOST POPULAR NETFLIX PRODUCED GENRE:</h2>
+          <br>
+          <h1>STAND-UP COMEDY</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- WORD CLOUDS -->
+      <div id="container"></div>
+      <section class="info">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <h2>MOST POPULAR NON-NETFLIX PRODUCED GENRE:</h2>
+              <br>
+              <h1>DRAMA</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <div id="container2"></div>
+      <section class="info">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <h1>OVER THE YEARS NETFLIX HAS INCREASED THE NUMBER OF MOVIES ADDED TO NETFLIX IN THE MAJORITY OF GENRES</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+      <br>
+<!-- BAR CHART DROPDOWN MENU-->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <p class="label">Genre :
+              <select id = "genre"></select></p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <p class="label">Type :
+              <select id="type"></select></p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <!-- BAR CHART -->
+    <div id="bar"></div>
+    <section class="info">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <h2>NETFLIX PRODUCED MOVIES AND NON-NETFLIX PRODUCED HAVE SIMILAR IMDB RATING</h2>
+            <h3>WITH NETFLIX PRODUCED MOVIES SLIGHTLY SURPASSING NON-NETFLIX PRODUCED MOVIES</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SCATTERPLOT -->
+      <div id="scatter"></div>
+      <section class="info">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <h2>MOST POPULAR TV RATING NETFLIX PRODUCED AND NON-NETFLIX PRODUCED TV RATING:</h2>
+                <br>
+                <h1>TV-MA</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- PIE CHARTS -->
+      <div class="container-fluid">
+        <div class="jumbotron" id="pie_jumbo">
+        <div class="row">
+          <div class= "col-lg-6 col-md-6 col-sm-6">
+            <div id="pie"></div>
+          </div>
+          <div class= "col-lg-6 col-md-6 col-sm-6">
+            <div id="pie2"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+ 
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+  crossorigin="anonymous"></script>
+
+
+
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+
+ <!-- JS -->
+ <script type="text/javascript" src="../js/visualizations_js/charts.js"></script>
+ <script type="text/javascript" src="../js/visualizations_js/scatter.js"></script>
+ 
+
+  </body>
+  
+  </html>

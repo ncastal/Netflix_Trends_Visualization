@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/map_style.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Favorite Netflix Shows</title>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <b><a class="navbar-brand" id="logo" href="./homepage.html">Netflix</a></b>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./fun_facts.html">Fun Facts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="popular_shows.html">Most Popular Shows</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./data.html">Data</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+
+<br>
+<h1 class="text-center">Most Popular Netflix Show in Each State (2018)</h1>
+
+  <!-- The div that holds our map -->
+  <div id="map"></div>
+
+   <!-- TABLE -->
+  <br>
+ <div class="container-fluid">
+   
+   <br>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+          <table class="table table-striped table-hover table-responsive text-center states-table">
+            <thead>
+              <tr>
+                <th>STATE</th>
+                <th>SHOW</th>
+              </tr>
+            </thead>
+            <tbody>
+  <!-- TABLE INSERTED  -->
+            </tbody>
+           </table>   
+        </div>
+      </div>
+  </div> 
+
+
+  <!-- TABLE INFORMATION -->
+  <br>
+<div class = "container-fluid">
+   <div class = "row">
+     <div class="col-lg-4 col-md-6 col-sm-6"> 
+      <div class="jumbotron" id="jumbotron1">
+        <h3>Washington, DC</h3>
+        <h3>**16 Way Tie**</h3>
+      <hr>
+          <ul>
+              <li>American Vandal</li>
+              <li>Arrested Development</li>
+              <li>Black Mirror</li>
+              <li>BoJack Horseman</li>
+              <li>Dear White People</li>
+              <li>GLOW</li>
+              <li>House of Cards</li>
+              <li>Jane the Virgin</li>
+              <li>Jessica Jones</li>
+              <li>Mad Men</li>
+              <li>Maniac</li>
+              <li>Queer Eye</li>
+              <li>Sense8</li>
+              <li>The Crown</li>
+              <li>The Good Place</li>
+              <li>Unbreakable Kimmy Schmidt</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-6 col-sm-6"> 
+        <div class="jumbotron" id="jumbotron2">
+          <h3>The most popular show among all the United States is <i>13 Reasons Why</i>, followed by <i>The End of the F***ing World</i></h3>
+          <br>
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6"> 
+              <h4>States That Love 13 Reasons Why</h4>
+              <hr>
+              <ul>
+                <li>Connecticut</li>
+                <li>Illinois</li>
+                <li>Mississippi</li>
+                <li>New Jersey</li>
+                <li>North Carolina</li>
+                <li>Ohio</li>
+                <li>Rhode Island</li>
+              </ul>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6"> 
+              <h4>States That Love The End of the F***ing World</h4>
+              <hr>
+              <ul>
+                <li>Arizona</li>
+                <li>Iowa</li>
+                <li>Maine</li>
+                <li>Nevada</li>
+                <li>New Hamsphire</li>
+                <li>South Carolina</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+  <!-- D3 JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.3/d3.min.js"></script>
+  <!-- API key -->
+  <script type="text/javascript" src="../js/map_js/config.js"></script>
+  <!-- US DATA -->
+  <script type="text/javascript" src="../js/map_js/us_data.js"></script>
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src="../js/map_js/logic.js"></script>
+  
+  
+  
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+  crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script type="text/javascript" src="../js/map_js/states_shows_table.js"></script>
+ 
+
+  
+</body>
+</html>
+
+  
+  
+
+
+  
+  
