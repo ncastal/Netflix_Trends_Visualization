@@ -40,9 +40,9 @@ function array_contains(array, value) {
     return false;
 };
 
-d3.json("../../data/visualizations_data/netflix_us_shows.json").then(function(netflixShows){
+d3.json("data/visualizations_data/netflix_us_shows.json").then(function(netflixShows){
     
-        d3.json("../../data/visualizations_data/us_shows.json").then(function(notNetflix){
+        d3.json("data/visualizations_data/us_shows.json").then(function(notNetflix){
             console.log(netflixShows)
             console.log(notNetflix)
             netflixGenres=calculate(groups(netflixShows,"listed_in"))
@@ -241,8 +241,8 @@ d3.select("#genre")
     .on("change",function(d){
         value=this.value;
         console.log(value)
-        d3.json("../data/visualizations_data/netflix_us_shows.json").then(function(netflixShows){
-            d3.json("../data/visualizations_data/us_shows.json").then(function(notNetflix){
+        d3.json("data/visualizations_data/netflix_us_shows.json").then(function(netflixShows){
+            d3.json("data/visualizations_data/us_shows.json").then(function(notNetflix){
                 filterNetflix=netflixShows.filter(function(n){
                     return n.listed_in.includes(value)
                 })
