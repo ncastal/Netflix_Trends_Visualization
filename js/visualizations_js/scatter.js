@@ -1,5 +1,5 @@
-d3.csv("../data/visualizations_data/IMDB_netflix.csv").then(function(netflixIMDB){
-    d3.csv("../data/visualizations_data/IMDB_not_netflix.csv").then(function(notNetflixIMDB){
+d3.csv("data/visualizations_data/IMDB_netflix.csv").then(function(netflixIMDB){
+    d3.csv("data/visualizations_data/IMDB_not_netflix.csv").then(function(notNetflixIMDB){
         netflixRatings=[]
         years=[]
         

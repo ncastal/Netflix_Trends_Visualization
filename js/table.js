@@ -3,7 +3,7 @@ var filteredData;
 
 
 
-d3.csv('../data/table_data/us_netflix.csv').then(function (data) {
+d3.csv('data/table_data/us_netflix.csv').then(function (data) {
 	filteredData = data;
 	renderTable(filteredData)	
 })
