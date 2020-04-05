@@ -1,5 +1,5 @@
 var tableData;
-d3.csv('.../data/map_data/netflix.csv').then(function (data) {
+d3.csv('../../../data/map_data/netflix.csv').then(function (data) {
 	tableData = data;
 	renderTable(tableData)	
 });

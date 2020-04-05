@@ -63,7 +63,7 @@ legend.onAdd = function (map) {
 legend.addTo(map);
 
 
-var link = ".../data/map_data/netflix_statelatlong.csv";
+var link = "../data/map_data/netflix_statelatlong.csv";
 
   d3.csv(link, function(data) {
   for (var i = 0; i < data.length; i++) {
