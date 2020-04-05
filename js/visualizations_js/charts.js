@@ -40,7 +40,7 @@ function array_contains(array, value) {
     return false;
 };
 
-d3.json("data/visualizations_data/netflix_us_shows.json").then(function(netflixShows){
+d3.json("../../data/visualizations_data/netflix_us_shows.json").then(function(netflixShows){
     
         d3.json("data/visualizations_data/us_shows.json").then(function(notNetflix){
             console.log(netflixShows)
