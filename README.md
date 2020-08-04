@@ -1,4 +1,5 @@
-# netflix
+# Netflix_Trends_Visualization
+
 Project on analyzing trends in Netflix shows.  Created website using html and javascript to view visualizations of trends.
 
 Netflix is the world's leading streaming entertainment service with over 167 million paid memberships in over 190 countries enjoying TV series, documentaries and feature films across a wide variety of genres and languages. Members can watch as much as they want, anytime, anywhere, on any internet-connected screen. Members can play, pause and resume watching, all without commercials or commitments.
